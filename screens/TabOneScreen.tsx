@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, StyleSheet } from 'react-native';
+import { Button, Image, StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -8,9 +8,15 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One のタブ1</Text>
+      <Image source={require('../assets/images/bg.png')} style={{ width: 400, height: 200 }} />
       <Button
-       title="Learn More"
-       color="#841584"
+       title="Learn Moreボタン"
+       color="#aaf"
+       accessibilityLabel="Learn more about this purple button"
+      />
+      <Button
+       title="EXIT"
+       color="#f88"
        accessibilityLabel="Learn more about this purple button"
       />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
