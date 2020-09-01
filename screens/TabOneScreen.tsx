@@ -15,10 +15,10 @@ export default function TabOneScreen() {
        color="#aaf"
        accessibilityLabel="Learn more about this purple button"
       />
+      <IncrementButton/>
       <ExitButton/>
       <Button
-       onPress={() => self.x = self.x + "z"}
-       title={'TITLE:' + x}
+       title="EXIT"
        color="#f88"
        accessibilityLabel="Learn more about this purple button"
       />
@@ -29,17 +29,36 @@ export default function TabOneScreen() {
   );
 }
 
-class ExitButton extends React.Component {
+class IncrementButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "eabr",
+      value: 0,
     };
   }
   render() {
     return (
       <Button
-       onPress={() => this.setState({ value: this.state.value + "eabc"})}
+       onPress={() => this.setState({ value: this.state.value + 1})}
+       title={"増やすボタン: " + this.state.value}
+       color="#aaf"
+       accessibilityLabel="Learn more about this purple button"
+      />
+    );
+  }
+}
+
+class ExitButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "延びるボタン：",
+    };
+  }
+  render() {
+    return (
+      <Button
+       onPress={() => this.setState({ value: this.state.value + "_eabc_"})}
        title={this.state.value}
        color="#aaf"
        accessibilityLabel="Learn more about this purple button"
