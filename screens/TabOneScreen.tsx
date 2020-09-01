@@ -8,19 +8,30 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One のタブ1</Text>
-      <Image source={require('../assets/images/bg.png')} style={{ width: 400, height: 200 }} />
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <Image
+        source={require('../assets/images/bg.png')}
+        style={{ width: 400, height: 200 }}
+      />
+      <View
+        style={styles.separator}
+        lightColor="#eee"
+        darkColor="rgba(255,255,255,0.1)"
+      />
       <View style={styles.button}>
         <Button
-         onPress={() => Alert.alert('not yet implemented')}
-         title="まだできていないLearn Moreボタン"
-         color="#aaf"
-         accessibilityLabel="Learn more about this purple button"
+          onPress={() => Alert.alert('not yet implemented')}
+          title="まだできていないLearn Moreボタン"
+          color="#aaf"
+          accessibilityLabel="Learn more about this purple button"
         />
       </View>
-      <IncrementButton/>
-      <ExitButton/>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <IncrementButton />
+      <ExitButton />
+      <View
+        style={styles.separator}
+        lightColor="#eee"
+        darkColor="rgba(255,255,255,0.1)"
+      />
       <Text style={styles.title}>Tab One 本体</Text>
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
@@ -28,7 +39,7 @@ export default function TabOneScreen() {
 }
 
 class IncrementButton extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {
       value: 0,
@@ -38,10 +49,10 @@ class IncrementButton extends React.Component {
     return (
       <View style={styles.button}>
         <Button
-         onPress={() => this.setState({ value: this.state.value + 1})}
-         title={"増やすボタン: " + this.state.value}
-         color="#8c3"
-         accessibilityLabel="increment the counter"
+          onPress={() => this.setState({ value: this.state.value + 1 })}
+          title={'増やすボタン: ' + this.state.value}
+          color="#8c3"
+          accessibilityLabel="increment the counter"
         />
       </View>
     );
@@ -49,10 +60,10 @@ class IncrementButton extends React.Component {
 }
 
 class ExitButton extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {
-      value: "EXIT",
+      value: 'EXIT',
     };
   }
   render() {
@@ -60,14 +71,11 @@ class ExitButton extends React.Component {
       <View style={styles.exit}>
         <Button
           color="red"
-          onPress={() => Alert.alert(
-              "This is Alert",
-              "My Alert Msg",
-              [
-                { text: "Cancel", style: "cancel" },
-                { text: "EXIT" }
-              ]
-          )
+          onPress={() =>
+            Alert.alert('This is Alert', 'My Alert Msg', [
+              { text: 'Cancel', style: 'cancel' },
+              { text: 'EXIT' },
+            ])
           }
           title={this.state.value}
           accessibilityLabel="Terminate this app."
@@ -77,7 +85,7 @@ class ExitButton extends React.Component {
   }
 }
 
-var x = "a1a2a3a" + "a00";
+var x = 'a1a2a3a' + 'a00';
 
 const styles = StyleSheet.create({
   container: {
@@ -95,22 +103,22 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   exit: {
-     color: "#f00",
-     fontSize: 20,
-     fontWeight: 'bold',
-     width: 100,
-     margin: 8,
-     padding: 0,
-     borderWidth: 2,
-     borderColor: "#000",
-     borderStlye: "solid",
+    color: '#f00',
+    fontSize: 20,
+    fontWeight: 'bold',
+    width: 100,
+    margin: 8,
+    padding: 0,
+    borderWidth: 2,
+    borderColor: '#000',
+    borderStyle: 'solid',
   },
   button: {
-     width: 300,
-     margin: 8,
-     padding: 0,
-     borderWidth: 2,
-     borderColor: "#f55",
-     borderStlye: "solid",
-  }
+    width: 300,
+    margin: 8,
+    padding: 0,
+    borderWidth: 2,
+    borderColor: '#f55',
+    borderStyle: 'solid',
+  },
 });
