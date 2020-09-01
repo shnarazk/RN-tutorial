@@ -41,7 +41,7 @@ class IncrementButton extends React.Component {
          onPress={() => this.setState({ value: this.state.value + 1})}
          title={"増やすボタン: " + this.state.value}
          color="#8c3"
-         accessibilityLabel="Learn more about this purple button"
+         accessibilityLabel="increment the counter"
         />
       </View>
     );
@@ -60,9 +60,17 @@ class ExitButton extends React.Component {
       <View style={styles.exit}>
         <Button
           color="red"
-          onPress={() => this.setState({ value: this.state.value + "_eabc_"})}
+          onPress={() => Alert.alert(
+              "This is Alert",
+              "My Alert Msg",
+              [
+                { text: "Cancel", style: "cancel" },
+                { text: "EXIT" }
+              ]
+          )
+          }
           title={this.state.value}
-          accessibilityLabel="Learn more about this purple button"
+          accessibilityLabel="Terminate this app."
         />
       </View>
     );
