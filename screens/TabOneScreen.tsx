@@ -9,6 +9,7 @@ export default function TabOneScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Tab One のタブ1</Text>
       <Image source={require('../assets/images/bg.png')} style={{ width: 400, height: 200 }} />
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View style={styles.button}>
         <Button
          onPress={() => Alert.alert('not yet implemented')}
@@ -19,11 +20,6 @@ export default function TabOneScreen() {
       </View>
       <IncrementButton/>
       <ExitButton/>
-      <Button
-       title="EXIT"
-       color="#f88"
-       accessibilityLabel="Learn more about this purple button"
-      />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.title}>Tab One 本体</Text>
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
@@ -56,17 +52,17 @@ class ExitButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "延びるボタン：",
+      value: "EXIT",
     };
   }
   render() {
     return (
-      <View style={styles.button}>
+      <View style={styles.exit}>
         <Button
-         onPress={() => this.setState({ value: this.state.value + "_eabc_"})}
-         title={this.state.value}
-         color="#aaf"
-         accessibilityLabel="Learn more about this purple button"
+          color="red"
+          onPress={() => this.setState({ value: this.state.value + "_eabc_"})}
+          title={this.state.value}
+          accessibilityLabel="Learn more about this purple button"
         />
       </View>
     );
@@ -89,6 +85,17 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  exit: {
+     color: "#f00",
+     fontSize: 20,
+     fontWeight: 'bold',
+     width: 100,
+     margin: 8,
+     padding: 0,
+     borderWidth: 2,
+     borderColor: "#000",
+     borderStlye: "solid",
   },
   button: {
      width: 300,
