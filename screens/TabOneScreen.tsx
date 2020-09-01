@@ -9,12 +9,14 @@ export default function TabOneScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Tab One のタブ1</Text>
       <Image source={require('../assets/images/bg.png')} style={{ width: 400, height: 200 }} />
-      <Button
-       onPress={() => Alert.alert('not yet implemented')}
-       title="まだできていないLearn Moreボタン"
-       color="#aaf"
-       accessibilityLabel="Learn more about this purple button"
-      />
+      <View style={styles.button}>
+        <Button
+         onPress={() => Alert.alert('not yet implemented')}
+         title="まだできていないLearn Moreボタン"
+         color="#aaf"
+         accessibilityLabel="Learn more about this purple button"
+        />
+      </View>
       <IncrementButton/>
       <ExitButton/>
       <Button
@@ -38,12 +40,14 @@ class IncrementButton extends React.Component {
   }
   render() {
     return (
-      <Button
-       onPress={() => this.setState({ value: this.state.value + 1})}
-       title={"増やすボタン: " + this.state.value}
-       color="#aaf"
-       accessibilityLabel="Learn more about this purple button"
-      />
+      <View style={styles.button}>
+        <Button
+         onPress={() => this.setState({ value: this.state.value + 1})}
+         title={"増やすボタン: " + this.state.value}
+         color="#8c3"
+         accessibilityLabel="Learn more about this purple button"
+        />
+      </View>
     );
   }
 }
@@ -57,12 +61,14 @@ class ExitButton extends React.Component {
   }
   render() {
     return (
-      <Button
-       onPress={() => this.setState({ value: this.state.value + "_eabc_"})}
-       title={this.state.value}
-       color="#aaf"
-       accessibilityLabel="Learn more about this purple button"
-      />
+      <View style={styles.button}>
+        <Button
+         onPress={() => this.setState({ value: this.state.value + "_eabc_"})}
+         title={this.state.value}
+         color="#aaf"
+         accessibilityLabel="Learn more about this purple button"
+        />
+      </View>
     );
   }
 }
@@ -84,4 +90,12 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+  button: {
+     width: 300,
+     margin: 8,
+     padding: 0,
+     borderWidth: 2,
+     borderColor: "#f55",
+     borderStlye: "solid",
+  }
 });
