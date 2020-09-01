@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Image, StyleSheet } from 'react-native';
+import { Alert, Button, Image, StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -10,12 +10,15 @@ export default function TabOneScreen() {
       <Text style={styles.title}>Tab One のタブ1</Text>
       <Image source={require('../assets/images/bg.png')} style={{ width: 400, height: 200 }} />
       <Button
-       title="Learn Moreボタン"
+       onPress={() => Alert.alert('not yet implemented')}
+       title="まだできていないLearn Moreボタン"
        color="#aaf"
        accessibilityLabel="Learn more about this purple button"
       />
+      <ExitButton/>
       <Button
-       title="EXIT"
+       onPress={() => self.x = self.x + "z"}
+       title={'TITLE:' + x}
        color="#f88"
        accessibilityLabel="Learn more about this purple button"
       />
@@ -25,6 +28,27 @@ export default function TabOneScreen() {
     </View>
   );
 }
+
+class ExitButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "eabr",
+    };
+  }
+  render() {
+    return (
+      <Button
+       onPress={() => this.setState({ value: this.state.value + "eabc"})}
+       title={this.state.value}
+       color="#aaf"
+       accessibilityLabel="Learn more about this purple button"
+      />
+    );
+  }
+}
+
+var x = "a1a2a3a" + "a00";
 
 const styles = StyleSheet.create({
   container: {
