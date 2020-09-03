@@ -25,7 +25,13 @@ iOSのシミュレーションにはrubyが必要
 gem install cocapods
 ```
 
-androidを使用するにはabs？が必要
+androidを使用するにはJDK 8+(Java Development Kit), Android Studio, abs？が必要、などなど
+
+Android Stdioのインストールで以下を選択
+* Android SDK
+* Andorid SDK platform 29
+* Android Virtual Device
+
 
 ## 2. プロジェクト開始
 
