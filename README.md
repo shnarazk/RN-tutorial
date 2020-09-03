@@ -9,25 +9,41 @@
 
 # ステップ
 
-## 1. 環境構築
+## 1. 環境構築 https://reactnative.dev/docs/environment-setup
 
 1. コンパイル環境インストール
 
 ```
-npm i -g ...
+npm i -g expo-cli
 ```
 
-2. 実行環境インストール
+2. 実機実行環境インストール
+
+iOSのシミュレーションにはrubyが必要
 
 ```
-npm i -g ...
+gem install cocapods
 ```
+
+androidを使用するにはabs？が必要
 
 ## 2. プロジェクト開始
 
 ```
-react ...
+npx react-native init AwesomeProject
 ```
 
 ## 3 実行環境起動
 
+1. webベース
+
+```
+npm start
+```
+
+2. 実機シミュレーション
+
+```
+npm run ios
+npm run android
+```
