@@ -10,6 +10,7 @@
 - [x] `Board`の関数オブジェクトへの書き換え
 - [x] updating: https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048#input-の内容を取得する処理の追加 
   * ***parentなりStateなりに状態を集約させた方がいいのでは？***
+  > それでは、どんな挙動になってほしいのかを考えてみましょう。ユーザがフォームを変更するたびに、ユーザ入力を反映するように state を更新したいですね。コンポーネントの state を更新できるのは自分自身だけであるべきなので、FilterableProductTable は SearchBar にコールバックを渡しておいて、state を更新したいときに実行してもらうようにします。入力のたびに呼び出される onChange イベントを利用するとよいでしょう。このコールバックを実行された FilterableProductTable は、setState() を呼び出し、その結果としてアプリが更新されます。 https://ja.reactjs.org/docs/thinking-in-react.html#step-5-add-inverse-data-flow
 - [ ] storage: https://medium.com/mesan-digital/tutorial-react-native-redux-with-crud-operations-cdb449538886
 
 # ステップ
