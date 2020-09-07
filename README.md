@@ -5,7 +5,8 @@
 
 ### TODO
 
-* React tutorial: https://ja.reactjs.org/tutorial/tutorial.html
+* React tutorial: https://ja.reactjs.org/tutorial/tutorial.html 
+  * 実行環境: https://codesandbox.io/s/react-tutorial-tic-tac-toe-o06xn
 * updating: https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048#input-の内容を取得する処理の追加
 * storage: https://medium.com/mesan-digital/tutorial-react-native-redux-with-crud-operations-cdb449538886
 
