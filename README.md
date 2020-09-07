@@ -8,7 +8,8 @@
 - [x] React tutorial: https://ja.reactjs.org/tutorial/tutorial.html 
   * 実行環境: https://codesandbox.io/s/react-tutorial-tic-tac-toe-o06xn
 - [x] `Board`の関数オブジェクトへの書き換え
-- [ ] updating: https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048#input-の内容を取得する処理の追加
+- [x] updating: https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048#input-の内容を取得する処理の追加
+　* ***parentなりStateなりに状態を集約させた方がいいのでは？***
 - [ ] storage: https://medium.com/mesan-digital/tutorial-react-native-redux-with-crud-operations-cdb449538886
 
 # ステップ
